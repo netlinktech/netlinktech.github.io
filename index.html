@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MD Raju Sheikh — Portfolio</title>
+  <meta name="description" content="Personal portfolio of MD Raju Sheikh: projects, skills, experience, and contact." />
+  <meta name="author" content="MD Raju Sheikh" />
+  <meta property="og:title" content="MD Raju Sheikh — Portfolio" />
+  <meta property="og:description" content="Projects, skills, and contact details." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%230ea5e9'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='54' fill='white' font-family='Arial, Helvetica, sans-serif'%3ERS%3C/text%3E%3C/svg%3E" />
+  <style>
+    :root{
+      --bg: #0b1020;          /* dark background */
+      --panel: #12182b;       /* elevated panel */
+      --text: #f3f4f6;        /* primary text */
+      --muted: #a7b0c0;       /* secondary text */
+      --brand: #0ea5e9;       /* cyan */
+      --brand-2:#22d3ee;      /* accent */
+      --ok: #10b981;          /* green */
+      --chip: #1f2942;        /* chip bg */
+      --border: #223058;      /* subtle border */
+      --shadow: 0 10px 30px rgba(2,8,23,.45);
+    }
+    /* Light mode variables override */
+    .light{
+      --bg: #f7fafc;
+      --panel: #ffffff;
+      --text: #0b1020;
+      --muted: #4b5563;
+      --brand: #0ea5e9;
+      --chip: #eef2ff;
+      --border: #e5e7eb;
+      --shadow: 0 10px 30px rgba(2,8,23,.08);
+    }
+    html,body{height:100%;scroll-behavior:smooth}
+    body{
+      margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg); color: var(--text);
+    }
+    a{color: inherit; text-decoration: none}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{
+      position: sticky; top:0; z-index:50; backdrop-filter: blur(8px);
+      background: color-mix(in oklab, var(--bg), transparent 40%);
+      border-bottom:1px solid var(--border);
+    }
+    nav{display:flex;align-items:center;gap:10px;justify-content:space-between}
+    .nav-links a{padding:10px 12px;border-radius:10px}
+    .nav-links a:hover{background:var(--chip)}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
+    .brand-mark{width:34px;height:34px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2)); display:grid;place-items:center; color:white; box-shadow: var(--shadow);}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid var(--border);background:var(--panel);cursor:pointer}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:white; border-color:transparent}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:64px 0}
+    .tag{display:inline-flex;gap:8px;align-items:center;background:var(--chip);border:1px solid var(--border);padding:8px 12px;border-radius:999px;color:var(--muted);font-size:14px}
+    .title{font-size:clamp(34px,6vw,54px);line-height:1.08;margin:14px 0}
+    .subtitle{color:var(--muted);font-size:18px;max-width:60ch}
+    .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+    .hero-card{background:var(--panel); border:1px solid var(--border); border-radius:18px;padding:22px; box-shadow: var(--shadow)}
+    .stat{display:flex;gap:12px;align-items:center}
+    .stat .dot{width:10px;height:10px;border-radius:999px;background:var(--ok)}
+
+    /* Chips */
+    .chips{display:flex;gap:10px;flex-wrap:wrap}
+    .chip{background:var(--chip);border:1px solid var(--border);padding:8px 12px;border-radius:999px;font-size:14px;color:var(--muted)}
+
+    /* Sections */
+    section{padding:54px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:20px}
+    h2{font-size:28px;margin:0}
+    p.lead{margin:0;color:var(--muted)}
+
+    /* Projects */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--panel);border:1px solid var(--border);border-radius:18px;overflow:hidden;display:flex;flex-direction:column; box-shadow: var(--shadow)}
+    .thumb{aspect-ratio: 16/9; background: linear-gradient(120deg, #181f39, #0b1327 60%, #0ea5e920)}
+    .card-body{padding:18px;display:flex;flex-direction:column;gap:10px}
+    .card h3{margin:0;font-size:18px}
+    .card p{margin:0;color:var(--muted)}
+    .card .tags{margin-top:6px}
+    .card .actions{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap}
+
+    /* About */
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+
+    /* Timeline */
+    .timeline{border-left:2px dashed var(--border);padding-left:18px}
+    .t-item{margin:16px 0}
+    .t-item h4{margin:0 0 6px 0}
+    .t-item span{color:var(--muted);font-size:14px}
+
+    /* Footer */
+    footer{border-top:1px solid var(--border);padding:26px 0;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr;}
+      .about{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 620px){
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#top" class="brand" aria-label="Home">
+          <span class="brand-mark" aria-hidden>RS</span>
+          <span>MD Raju Sheikh</span>
+        </a>
+        <div class="nav-links" role="navigation" aria-label="Primary">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button class="btn" id="themeToggle" aria-label="Toggle theme">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="top" class="container">
+    <section class="hero">
+      <div>
+        <span class="tag">👋 হাই, আমি <strong>রাজু</strong> — ফুল‑স্ট্যাক ডেভেলপার</span>
+        <h1 class="title">আমি সুন্দর, দ্রুত, আর ব্যবহারকারীবান্ধব ওয়েব অ্যাপ বানাই।</h1>
+        <p class="subtitle">JavaScript/TypeScript, React, Node.js এবং REST API‑তে ফোকাস করি। মজবুত ইঞ্জিনিয়ারিংয়ের সাথে চমৎকার UI বানাতে ভালো লাগে।</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn" href="mailto:md.rajusheikh.me@gmail.com">Email Me</a>
+          <a class="btn" href="resume.pdf" download>Download Résumé</a>
+        </div>
+        <div class="chips" style="margin-top:18px">
+          <span class="chip">JavaScript</span>
+          <span class="chip">TypeScript</span>
+          <span class="chip">React</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">Express</span>
+          <span class="chip">MongoDB</span>
+          <span class="chip">Tailwind</span>
+        </div>
+        <div class="hero-card" style="margin-top:22px">
+          <div class="stat"><span class="dot"></span><strong>Open for freelance</strong> — Available for part‑time or project‑based work.</div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <picture class="thumb" aria-label="profile visual" style="display:block;border-radius:14px;overflow:hidden"></picture>
+        <div class="card-body">
+          <h3 style="margin:0">Quick Links</h3>
+          <div class="actions">
+            <a class="btn" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="section-head">
+        <h2>Featured Projects</h2>
+        <p class="lead">A few things I've built recently.</p>
+      </div>
+      <div class="grid" role="list">
+        <!-- Project 1 -->
+        <article class="card" role="listitem">
+          <div class="thumb"></div>
+          <div class="card-body">
+            <h3>TaskFlow — Kanban Productivity App</h3>
+            <p>A Trello‑like app with drag & drop, team workspaces, and real‑time updates.</p>
+            <div class="tags chips">
+              <span class="chip">React</span>
+              <span class="chip">Node</span>
+              <span class="chip">Socket.io</span>
+            </div>
+            <div class="actions">
+              <a class="btn" href="https://your-demo-link.com" target="_blank" rel="noreferrer">Live Demo</a>
+              <a class="btn" href="https://github.com/yourusername/taskflow" target="_blank" rel="noreferrer">Source</a>
+            </div>
+          </div>
+        </article>
+        <!-- Project 2 -->
+        <article class="card" role="listitem">
+          <div class="thumb"></div>
+          <div class="card-body">
+            <h3>DevRecipes — Snippet Library</h3>
+            <p>Searchable code recipes with tags, favorites, and copy‑to‑clipboard.</p>
+            <div class="tags chips">
+              <span class="chip">Next.js</span>
+              <span class="chip">Prisma</span>
+              <span class="chip">PostgreSQL</span>
+            </div>
+            <div class="actions">
+              <a class="btn" href="https://your-demo-link.com" target="_blank" rel="noreferrer">Live Demo</a>
+              <a class="btn" href="https://github.com/yourusername/devrecipes" target="_blank" rel="noreferrer">Source</a>
+            </div>
+          </div>
+        </article>
+        <!-- Project 3 -->
+        <article class="card" role="listitem">
+          <div class="thumb"></div>
+          <div class="card-body">
+            <h3>Pixly — Image Optimizer CLI</h3>
+            <p>Blazing‑fast image compress & resize tool with smart defaults.</p>
+            <div class="tags chips">
+              <span class="chip">Node</span>
+              <span class="chip">CLI</span>
+              <span class="chip">Sharp</span>
+            </div>
+            <div class="actions">
+              <a class="btn" href="https://your-demo-link.com" target="_blank" rel="noreferrer">Docs</a>
+              <a class="btn" href="https://github.com/yourusername/pixly" target="_blank" rel="noreferrer">Source</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills & About -->
+    <section id="skills" class="about">
+      <div>
+        <div class="section-head"><h2>Skills</h2></div>
+        <div class="chips">
+          <span class="chip">HTML5</span>
+          <span class="chip">CSS3</span>
+          <span class="chip">Tailwind</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">TypeScript</span>
+          <span class="chip">React</span>
+          <span class="chip">Next.js</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">Express</span>
+          <span class="chip">MongoDB</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">REST / GraphQL</span>
+          <span class="chip">Git & GitHub</span>
+          <span class="chip">CI/CD</span>
+        </div>
+      </div>
+      <div id="about">
+        <div class="section-head"><h2>About</h2></div>
+        <p class="lead">আমি বাংলাদেশ‑ভিত্তিক একজন ডেভেলপার। আইডিয়া থেকে প্রোডাকশন পর্যন্ত পালিশড ওয়েব এক্সপিরিয়েন্স বানাতে ভালোবাসি—বিশেষ আগ্রহ: ডিজাইন সিস্টেম, পারফরম্যান্স অপ্টিমাইজেশন, আর ডেভেলপার টুলিং।</p>
+        <div class="timeline" aria-label="Experience timeline">
+          <div class="t-item">
+            <h4>Full‑Stack Developer — Freelance</h4>
+            <span>2023 — Present</span>
+            <p>Delivered web apps and dashboards for small businesses with React & Node.</p>
+          </div>
+          <div class="t-item">
+            <h4>Frontend Developer — Intern</h4>
+            <span>2022 — 2023</span>
+            <p>Built responsive UI components and improved Lighthouse scores by 25%.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p class="lead">Want to collaborate or hire me? Let's talk.</p>
+      </div>
+      <div class="hero-card">
+        <form class="card-body" onsubmit="return sendMail(event)">
+          <label>
+            Name
+            <input required name="name" placeholder="Your name" style="width:100%;padding:12px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--text);margin-top:6px" />
+          </label>
+          <label>
+            Email
+            <input required type="email" name="email" placeholder="you@example.com" style="width:100%;padding:12px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--text);margin-top:6px" />
+          </label>
+          <label>
+            Message
+            <textarea required name="message" rows="4" placeholder="Write your message…" style="width:100%;padding:12px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--text);margin-top:6px"></textarea>
+          </label>
+          <div class="actions">
+            <button class="btn btn-primary" type="submit">Send</button>
+            <a class="btn" href="mailto:md.rajusheikh.me@gmail.com">Email directly</a>
+          </div>
+          <small id="status" aria-live="polite" style="color:var(--muted)"></small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <span>© <span id="year"></span> MD Raju Sheikh. All rights reserved.</span>
+        <div class="chips">
+          <a class="chip" href="#top">Back to top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle
+    const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+    const saved = localStorage.getItem('theme');
+    if ((saved === 'light') || (!saved && prefersLight)) document.documentElement.classList.add('light');
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      document.documentElement.classList.toggle('light');
+      localStorage.setItem('theme', document.documentElement.classList.contains('light') ? 'light' : 'dark');
+    });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Contact form via mailto (no backend required)
+    function sendMail(e){
+      e.preventDefault();
+      const f = e.target;
+      const name = encodeURIComponent(f.name.value.trim());
+      const email = encodeURIComponent(f.email.value.trim());
+      const msg = encodeURIComponent(f.message.value.trim());
+      const subject = `[Portfolio] Message from ${decodeURIComponent(name)}`;
+      const body = `From: ${decodeURIComponent(name)} (%3C${decodeURIComponent(email)}%3E)%0D%0A%0D%0A${decodeURIComponent(msg)}`;
+      const href = `mailto:md.rajusheikh.me@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = href;
+      document.getElementById('status').textContent = 'Opening your email app…';
+      return false;
+    }
+  </script>
+</body>
+</html>
