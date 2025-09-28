@@ -108,6 +108,19 @@
       .grid{grid-template-columns:1fr}
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "MD Raju Sheikh",
+    "url": "https://netlinktech.github.io",
+    "email": "mailto:md.rajusheikh.me@gmail.com",
+    "sameAs": [
+      "https://github.com/netlinktech"
+    ],
+    "knowsAbout": ["PHP","Laravel","WordPress","JavaScript","React","Node.js","MySQL","API"]
+  }
+  </script>
 </head>
 <body>
   <!-- Header -->
@@ -119,6 +132,7 @@
           <span>MD Raju Sheikh</span>
         </a>
         <div class="nav-links" role="navigation" aria-label="Primary">
+          <a href="#services">Services</a>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
           <a href="#about">About</a>
@@ -135,20 +149,24 @@
       <div>
         <span class="tag">👋 হাই, আমি <strong>রাজু</strong> — ফুল‑স্ট্যাক ডেভেলপার</span>
         <h1 class="title">আমি সুন্দর, দ্রুত, আর ব্যবহারকারীবান্ধব ওয়েব অ্যাপ বানাই।</h1>
-        <p class="subtitle">JavaScript/TypeScript, React, Node.js এবং REST API‑তে ফোকাস করি। মজবুত ইঞ্জিনিয়ারিংয়ের সাথে চমৎকার UI বানাতে ভালো লাগে।</p>
+        <p class="subtitle">PHP, Laravel, WordPress, JavaScript/TypeScript, React, Node.js দিয়ে স্কেলেবল ও পারফরম্যান্ট ওয়েবসাইট/ওয়েব‑অ্যাপ তৈরি করি—ক্লিন কোড, সিকিউরিটি এবং SEO‑এর উপর গুরুত্ব দিয়ে।</p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="#projects">View Projects</a>
           <a class="btn" href="mailto:md.rajusheikh.me@gmail.com">Email Me</a>
           <a class="btn" href="resume.pdf" download>Download Résumé</a>
         </div>
         <div class="chips" style="margin-top:18px">
+          <span class="chip">PHP</span>
+          <span class="chip">Laravel</span>
+          <span class="chip">WordPress</span>
+          <span class="chip">WooCommerce</span>
           <span class="chip">JavaScript</span>
           <span class="chip">TypeScript</span>
           <span class="chip">React</span>
           <span class="chip">Node.js</span>
-          <span class="chip">Express</span>
-          <span class="chip">MongoDB</span>
-          <span class="chip">Tailwind</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">REST APIs</span>
+          <span class="chip">Tailwind CSS</span>
         </div>
         <div class="hero-card" style="margin-top:22px">
           <div class="stat"><span class="dot"></span><strong>Open for freelance</strong> — Available for part‑time or project‑based work.</div>
@@ -159,7 +177,7 @@
         <div class="card-body">
           <h3 style="margin:0">Quick Links</h3>
           <div class="actions">
-            <a class="btn" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn" href="https://github.com/netlinktech" target="_blank" rel="noreferrer">GitHub</a>
             <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
             <a class="btn" href="#contact">Contact</a>
           </div>
@@ -167,61 +185,86 @@
       </div>
     </section>
 
+    <!-- Services -->
+    <section id="services">
+      <div class="section-head">
+        <h2>Services</h2>
+        <p class="lead">ফুল‑স্ট্যাক ডেভেলপমেন্ট, WP কাস্টমাইজেশন ও SaaS</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="thumb"></div>
+          <div class="card-body">
+            <h3>Laravel Web Apps & APIs</h3>
+            <p>মডুলার আর্কিটেকচার, অথ, রোল/পারমিশন, কিউ/জব, কেশিং, API রেট‑লিমিটিং।</p>
+            <div class="tags chips">
+              <span class="chip">Laravel</span><span class="chip">Sanctum</span><span class="chip">Redis</span>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"></div>
+          <div class="card-body">
+            <h3>WordPress Theme/Plugin Dev</h3>
+            <p>কাস্টম থিম/প্লাগইন, WooCommerce কাস্টমাইজেশন, হাই‑পারফরম্যান্স ও SEO‑রেডি।</p>
+            <div class="tags chips">
+              <span class="chip">WordPress</span><span class="chip">WooCommerce</span><span class="chip">ACF</span>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"></div>
+          <div class="card-body">
+            <h3>Frontend Engineering</h3>
+            <p>ডিজাইন‑সিস্টেম, রেসপনসিভ UI, অ্যাক্সেসিবিলিটি, Lighthouse স্কোর অপ্টিমাইজেশন।</p>
+            <div class="tags chips">
+              <span class="chip">React</span><span class="chip">Tailwind</span><span class="chip">Accessibility</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <!-- Projects -->
     <section id="projects">
       <div class="section-head">
         <h2>Featured Projects</h2>
-        <p class="lead">A few things I've built recently.</p>
+        <p class="lead">Laravel, WordPress ও JS‑এর কিছু কাজ</p>
       </div>
       <div class="grid" role="list">
-        <!-- Project 1 -->
         <article class="card" role="listitem">
           <div class="thumb"></div>
           <div class="card-body">
-            <h3>TaskFlow — Kanban Productivity App</h3>
-            <p>A Trello‑like app with drag & drop, team workspaces, and real‑time updates.</p>
-            <div class="tags chips">
-              <span class="chip">React</span>
-              <span class="chip">Node</span>
-              <span class="chip">Socket.io</span>
-            </div>
+            <h3>SaaS Starter — Laravel Multi‑Tenant</h3>
+            <p>Billing (Stripe), Teams, Roles/Permissions, Invitations, Activity Logs সহ সম্পূর্ণ SaaS বয়লারপ্লেট।</p>
+            <div class="tags chips"><span class="chip">Laravel</span><span class="chip">Cashier</span><span class="chip">MySQL</span></div>
             <div class="actions">
-              <a class="btn" href="https://your-demo-link.com" target="_blank" rel="noreferrer">Live Demo</a>
-              <a class="btn" href="https://github.com/yourusername/taskflow" target="_blank" rel="noreferrer">Source</a>
+              <a class="btn" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+              <a class="btn" href="https://github.com/netlinktech/saas-starter" target="_blank" rel="noreferrer">Source</a>
             </div>
           </div>
         </article>
-        <!-- Project 2 -->
         <article class="card" role="listitem">
           <div class="thumb"></div>
           <div class="card-body">
-            <h3>DevRecipes — Snippet Library</h3>
-            <p>Searchable code recipes with tags, favorites, and copy‑to‑clipboard.</p>
-            <div class="tags chips">
-              <span class="chip">Next.js</span>
-              <span class="chip">Prisma</span>
-              <span class="chip">PostgreSQL</span>
-            </div>
+            <h3>WP Commerce+ — High‑Perf Store</h3>
+            <p>WooCommerce থিম + কাস্টম প্লাগইন: কাস্টম চেকআউট, ভ্যারিয়েশন ইমেজ, অর্ডার এক্সপোর্টার।</p>
+            <div class="tags chips"><span class="chip">WordPress</span><span class="chip">WooCommerce</span><span class="chip">Plugin</span></div>
             <div class="actions">
-              <a class="btn" href="https://your-demo-link.com" target="_blank" rel="noreferrer">Live Demo</a>
-              <a class="btn" href="https://github.com/yourusername/devrecipes" target="_blank" rel="noreferrer">Source</a>
+              <a class="btn" href="#" target="_blank" rel="noreferrer">Live Site</a>
+              <a class="btn" href="https://github.com/netlinktech/wp-commerce-plus" target="_blank" rel="noreferrer">Source</a>
             </div>
           </div>
         </article>
-        <!-- Project 3 -->
         <article class="card" role="listitem">
           <div class="thumb"></div>
           <div class="card-body">
-            <h3>Pixly — Image Optimizer CLI</h3>
-            <p>Blazing‑fast image compress & resize tool with smart defaults.</p>
-            <div class="tags chips">
-              <span class="chip">Node</span>
-              <span class="chip">CLI</span>
-              <span class="chip">Sharp</span>
-            </div>
+            <h3>Headless Blog — WP + Next.js</h3>
+            <p>WP কে CMS হিসেবে ব্যবহার, Next.js ফ্রন্টএন্ড, ISR ও SEO‑অপ্টিমাইজড রাউটিং।</p>
+            <div class="tags chips"><span class="chip">WordPress</span><span class="chip">Next.js</span><span class="chip">REST</span></div>
             <div class="actions">
-              <a class="btn" href="https://your-demo-link.com" target="_blank" rel="noreferrer">Docs</a>
-              <a class="btn" href="https://github.com/yourusername/pixly" target="_blank" rel="noreferrer">Source</a>
+              <a class="btn" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+              <a class="btn" href="https://github.com/netlinktech/headless-blog" target="_blank" rel="noreferrer">Source</a>
             </div>
           </div>
         </article>
